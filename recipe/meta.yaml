@@ -1,4 +1,4 @@
-{% set version = "1.3.6" %}
+{% set version = "1.3.7" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/RPresto_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RPresto/RPresto_{{ version }}.tar.gz
-  sha256: 4c1d3924b9d836754ad17d0ca00d20f65009c8aac5d87f7958cde30cf67886f9
+  sha256: 2ca5b518967c6f323cc10649f667a8953583dd42892d708791e3309029ced7c7
 
 build:
   merge_build_host: true  # [win]
@@ -30,6 +30,7 @@ requirements:
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-dbi >=0.3.0
@@ -37,6 +38,7 @@ requirements:
     - r-httr >=0.6
     - r-jsonlite
     - r-openssl
+    - r-purrr
     - r-stringi
   run:
     - r-base
@@ -46,6 +48,7 @@ requirements:
     - r-httr >=0.6
     - r-jsonlite
     - r-openssl
+    - r-purrr
     - r-stringi
 
 test:
@@ -64,11 +67,11 @@ about:
 
 extra:
   recipe-maintainers:
+    - conda-forge/r
     - RyanHackney
     - rluria14
     - ndmaxar
     - Oblute
-    - conda-forge/r
 
 # Package: RPresto
 # Title: DBI Connector to Presto
