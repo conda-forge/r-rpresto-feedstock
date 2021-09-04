@@ -30,6 +30,7 @@ requirements:
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-dbi >=0.3.0
@@ -37,6 +38,7 @@ requirements:
     - r-httr >=0.6
     - r-jsonlite
     - r-openssl
+    - r-purrr
     - r-stringi
   run:
     - r-base
@@ -46,6 +48,7 @@ requirements:
     - r-httr >=0.6
     - r-jsonlite
     - r-openssl
+    - r-purrr
     - r-stringi
 
 test:
@@ -64,11 +67,11 @@ about:
 
 extra:
   recipe-maintainers:
+    - conda-forge/r
     - RyanHackney
     - rluria14
     - ndmaxar
     - Oblute
-    - conda-forge/r
 
 # Package: RPresto
 # Title: DBI Connector to Presto
