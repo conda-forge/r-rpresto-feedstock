@@ -1,11 +1,11 @@
-About r-rpresto
-===============
+About r-rpresto-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rpresto-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/prestodb/RPresto
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rpresto-feedstock/blob/main/LICENSE.txt)
 
 Summary: Implements a 'DBI' compliant interface to Presto. Presto is an open source distributed SQL query engine for running interactive analytic queries against data sources of all sizes ranging from gigabytes to petabytes: <https://prestodb.io/>.
 
