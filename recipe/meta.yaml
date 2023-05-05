@@ -1,4 +1,4 @@
-{% set version = "1.4.4" %}
+{% set version = "1.4.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/RPresto_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RPresto/RPresto_{{ version }}.tar.gz
-  sha256: bd8b9ae5cf81a8b11b4b11c8545975445fb7f801c1597a1107714aa74f30e0a1
+  sha256: 5a5da2519d98dcf0af6bd772605108241e366f6e551a9de814ce8dc3ea9ac5f9
 
 build:
   merge_build_host: true  # [win]
