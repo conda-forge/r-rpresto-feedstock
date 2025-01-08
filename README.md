@@ -145,7 +145,7 @@ Feedstock Maintainers
 
 * [@Oblute](https://github.com/Oblute/)
 * [@RyanHackney](https://github.com/RyanHackney/)
-* [@conda-forge/r](https://github.com/conda-forge/r/)
+* [@conda-forge/r](https://github.com/orgs/conda-forge/teams/r/)
 * [@ndmaxar](https://github.com/ndmaxar/)
 * [@rluria14](https://github.com/rluria14/)
 
