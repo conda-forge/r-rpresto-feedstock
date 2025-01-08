@@ -1,4 +1,4 @@
-{% set version = "1.4.6" %}
+{% set version = "1.4.7" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/RPresto_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RPresto/RPresto_{{ version }}.tar.gz
-  sha256: 0c39f9b1317a8eff879d68b86b396e7842a1c36118c9ee95659a4724061c0ce1
+  sha256: 7c32d21390bf671aa884e2961760252633c8fd437533d5bcde2c4636da978a64
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
