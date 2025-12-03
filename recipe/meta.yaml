@@ -17,6 +17,10 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -26,7 +30,7 @@ requirements:
     - r-base
     - r-dbi >=0.3.0
     - r-bit64
-    - r-dbplyr >=2.0.0
+    - r-dbplyr >=2.3.3
     - r-dplyr >=0.7.0
     - r-httr >=0.6
     - r-jsonlite
@@ -36,13 +40,16 @@ requirements:
     - r-progress
     - r-purrr
     - r-rlang
+    - r-stringdist
     - r-stringi
     - r-tibble
+    - r-tidyselect
+    - r-vctrs
   run:
     - r-base
     - r-dbi >=0.3.0
     - r-bit64
-    - r-dbplyr >=2.0.0
+    - r-dbplyr >=2.3.3
     - r-dplyr >=0.7.0
     - r-httr >=0.6
     - r-jsonlite
@@ -52,8 +59,11 @@ requirements:
     - r-progress
     - r-purrr
     - r-rlang
+    - r-stringdist
     - r-stringi
     - r-tibble
+    - r-tidyselect
+    - r-vctrs
 
 test:
   commands:
